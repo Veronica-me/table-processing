@@ -8,27 +8,26 @@ request.responseType = 'json';
 request.send();
 request.onload = function() {
     var taskData = request.response;
-    
-    $(document).ready(function () {
-        $('#table-tasks').bootstrapTable({
-            data: taskData
-        });
-        var taskDataEnd = document.querySelectorAll('tr td.data-end');
-        var todayDate = new Date();
-        taskDataEnd.forEach (item => {
-            var dateTaskEnd = new Date(item.innerHTML);   
-            console.log("сейчас: " + todayDate);  
-            console.log("финал задания: " + dateTaskEnd);
-            if (dateTaskEnd < todayDate) {
-                $(item).addClass("red");
-                
-            }
+    console.log (taskData);
+    if (taskData){
+        $(document).ready(function () {
+            $('#table-tasks').bootstrapTable({
+                data: taskData
+            });
+            var taskDataEnd = document.querySelectorAll('tr td.data-end');
+            var todayDate = new Date();
+            taskDataEnd.forEach (item => {
+                var dateTaskEnd = new Date(item.innerHTML);   
+                if (dateTaskEnd < todayDate) {
+                    $(item).addClass("red");   
+                }
             }
             );
+        }
+        );
+    } else {
+        document.querySelector(".error").innerHTML = "Brak danych!";
     }
-    );
-
-    
     setColors();  
     
     

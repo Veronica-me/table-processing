@@ -22,7 +22,11 @@ tr .red {
     background-color: red;
     color: #fff;
 }
-
+.error {
+    color:red;
+    font-size: 20px;
+    font-weight: 700;
+}
 .table [data-sort] {
     cursor: pointer;
 }

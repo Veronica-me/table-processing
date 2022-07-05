@@ -5,51 +5,51 @@
     <title>Document</title>  
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
- <!-- -->
- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.css">
-<script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
- <!-- -->
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
-<script src="mutal-sripts.js" async></script>
-<script src="scripts-task.js" async></script>
-<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
+    <!-- -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script src="mutal-sripts.js" async></script>
+    <script src="scripts-task.js" async></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <div class="h-cont">
-          <div class="container">
-            <h3>Task table</h3>
-          </div> 
+            <div class="container">
+                <h3>Task table</h3>
+            </div> 
         </div> 
-      </header>
-      <section class="headings">
+    </header>
+    <section class="headings">
         <p><b>Today:</b>  <span class="actual-date"></span></p>
         <p>Go to <a href="\"> Table of orders</a></p>
-      </section>
-<section>
-    
-    <h2>Table of tasks</h2>
-    <table id="table-tasks" class="table table-hover table-responsive">
-        <thead class="table-dark">
-            <tr class="">
-                <th  data-field="id">nr zadania</th>
-                <th  data-field="name">osoba</th>
-                <th  data-field="data-begin" >data rozpoczęcia</th>
-                <th  data-field="data-end" class="data-end">data zakończenia</th>
-                <th  data-field="ready-percent" class="percent"> procent wykonania</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
+    </section>
+    <section>
         
-    </table>
-</section>    
-
+        <h2>Table of tasks</h2>
+        <table id="table-tasks" class="table table-hover table-responsive">
+            <thead class="table-dark">
+                <tr class="">
+                    <th  data-field="id">nr zadania</th>
+                    <th  data-field="name">osoba</th>
+                    <th  data-field="data-begin" >data rozpoczęcia</th>
+                    <th  data-field="data-end" class="data-end">data zakończenia</th>
+                    <th  data-field="ready-percent" class="percent"> procent wykonania</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            
+        </table>
+    </section>    
+    <section><p class="error"></p></section>
 </body>
 
 </html>
