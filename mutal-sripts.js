@@ -7,7 +7,7 @@ function zero_first_format(value)
     return value;
 }
 
-/* функция получения текущей даты и времени */
+
 function date_time()
 {
     var current_datetime = new Date();
@@ -54,10 +54,7 @@ function addProgressBar(){
         if (!isNaN(parseFloat(percentValue)) && isFinite(percentValue)) {          
             progressValue = "<div class='progress'><div class='progress-bar' role='progressbar' style='width: "+ percentValue +"%' aria-valuenow='"+ percentValue +"' aria-valuemin='0' aria-valuemax='100'></div></div>";
             item.innerHTML = item.innerHTML + progressValue;
-        } else {
-            console.log("Не число!");
-        }
-                })
+        }                 })
             }, 10)
         }
 
@@ -68,9 +65,7 @@ function addProgressBar(){
             element.classList.toggle("tablet");
             if (element.classList.contains("tablet")) {
                 document.querySelector(".change-size span").innerHTML = "desktop";
-                console.log("Класс есть!");
             } else {
-                console.log("уже нет!");
                 document.querySelector(".change-size span").innerHTML = "tablet";
             };
         }
