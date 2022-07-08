@@ -24,32 +24,41 @@
     <header>
         <div class="h-cont">
             <div class="container">
-                <h3>Main table</h3>
-                
-                
+                <h1>Main page</h1>
+                <p><b>Today:</b>  <span class="actual-date"></span></p>
+                <a class="change-size btn btn-outline-primary" href="#">Change Screen Mode to <span>tablet</span></a>   
+                    <ul class="menu">
+                      <li>Table of orders</li>
+                      <li><a href="second-page.html"> Task table</a></li>
+                    </ul>            
             </div> 
+          
         </div> 
+
+
     </header>
-    <section class="headings">
-        <p><b>Today:</b>  <span class="actual-date"></span></p>
-        <p>Go to <a href="second-page.html"> Task table</a></p>
-    </section>
-    <section>
-        <h2>Table of orders</h2>
-        <table id="table" class="table table-hover table-responsive">
-            <thead class="table-dark">
-                <tr class="">
-                    <th  data-field="id">nr zlecenia</th>
-                    <th  data-field="name">nazwa zlecenia</th>
-                    <th  data-sortable="true" data-field="realization-date" class="sort" data-sort="realization">data realizacji</th>
-                    <th  data-field="ready-percent" class="percent"> procent ukończenia</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-            
-        </table>
-    </section>    
-    <section><p class="error"></p></section>
+
+
+  <div class="wrapper">
+       
+
+        <section>
+            <h2>Table of orders</h2>
+            <table id="table" class="table table-hover table-responsive">
+                <thead class="table-dark">
+                    <tr class="">
+                        <th  data-field="id" class="col-md-1">nr zlecenia</th>
+                        <th  data-field="name">nazwa zlecenia</th>
+                        <th  data-sortable="true" data-field="realization-date" class="col-md-2 sort" data-sort="realization">data realizacji</th>
+                        <th  data-field="ready-percent" class="col-md-2 percent"> procent ukończenia</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                
+            </table>
+        </section>    
+        <section><p class="error"></p></section>
+    </div>
 </body>
 
 </html>

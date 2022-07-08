@@ -1,15 +1,56 @@
 body {
     background-color:whitesmoke;
+    padding-bottom: 60px;
     
 }
+.wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.tablet-s {
+    max-width: 768px;
+}
+.tablet {
+    margin-top: 30px;
+    max-width: 1024px;
+    height: 768px;
+    padding: 0 ;
+    overflow-y: scroll;
+    border: 2px solid #235885;
+    border-radius: 10px;
+}
+.tablet h2 {
+    margin-left: 1em;
+}
 section {max-width: 1800px;
-    margin: 60px auto;}
+    margin: 20px auto;}
 .h-cont {
     min-height: 100px;
-    background-color: beige;
+    background-color: rgba(76,184,235,.75);
     display: flex;
-    align-items: center;
-    
+    flex-direction: column;
+    color: #fff;
+    font-weight: 600;
+    align-items: flex-start;
+    padding: 40px 0;
+}
+.menu  {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin: 20px 0;
+}
+.menu>li {
+    position: relative;
+    padding: 0 20px;
+}
+.menu>li:first-child{padding-left: 0;}
+.menu>li:first-child::after {
+    display: block;
+    position: absolute;
+    content: "/";
+    top: 0;
+    right: 0;
 }
 .container {vertical-align: middle;}
 .light-green {
@@ -33,4 +74,13 @@ tr .red {
 .table [data-sort]::after {
     margin-left: .25rem;
     content: url('data:image/svg+xml;utf8,<svg width=\'6\' height=\'10\' viewBox=\'0 0 6 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><path fill-rule=\'evenodd\' clip-rule=\'evenodd\' d=\'M3 0L6 4H0L3 0ZM3 10L0 6H6L3 10Z\' fill=\'%238898aa\'/></svg>');
+}
+.progress {
+    margin-bottom: 20px;
+}
+.progress-bar {
+    background-color: #235885;
+}
+.change-size>span{
+    text-transform: uppercase;
 }

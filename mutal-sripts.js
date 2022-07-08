@@ -26,12 +26,13 @@ function date_time()
         actualDate.innerHTML = date_time();
     }, 1000);
 
+    
+
     function setColors () {
         setTimeout(function() {
         var percentItems = document.querySelectorAll('.percent');
         percentItems.forEach (item => {
-            var percentValue = item.innerHTML;
-            
+            var percentValue = item.innerText;
             if (percentValue == 100) {
                 $(item.closest('tr')).addClass("green"); 
             } else if (percentValue >= 80) {
@@ -42,3 +43,34 @@ function date_time()
         )
     }, 10)
 }
+
+
+function addProgressBar(){
+    setTimeout(function() {
+    var percents = document.querySelectorAll('.percent');
+    percents.forEach (item => {
+        
+        percentValue = item.innerHTML;
+        if (!isNaN(parseFloat(percentValue)) && isFinite(percentValue)) {          
+            progressValue = "<div class='progress'><div class='progress-bar' role='progressbar' style='width: "+ percentValue +"%' aria-valuenow='"+ percentValue +"' aria-valuemin='0' aria-valuemax='100'></div></div>";
+            item.innerHTML = item.innerHTML + progressValue;
+        } else {
+            console.log("Не число!");
+        }
+                })
+            }, 10)
+        }
+
+        var sizeButton = document.querySelector('.change-size');
+        sizeButton.addEventListener('click', changeSize);
+        function changeSize(){
+            var element = document.querySelector(".wrapper");
+            element.classList.toggle("tablet");
+            if (element.classList.contains("tablet")) {
+                document.querySelector(".change-size span").innerHTML = "desktop";
+                console.log("Класс есть!");
+            } else {
+                console.log("уже нет!");
+                document.querySelector(".change-size span").innerHTML = "tablet";
+            };
+        }

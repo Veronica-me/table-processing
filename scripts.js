@@ -13,7 +13,9 @@ request.onload = function() {
             $('#table').bootstrapTable({
                 data: orderData
             });
+            addProgressBar();
             var sortButton = document.querySelector('.sort');
+            sortButton.addEventListener('click', addProgressBar);
             sortButton.addEventListener('click', setColors);
             setColors();  
             

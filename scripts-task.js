@@ -8,7 +8,7 @@ request.responseType = 'json';
 request.send();
 request.onload = function() {
     var taskData = request.response;
-    console.log (taskData);
+    //console.log (taskData);
     if (taskData){
         $(document).ready(function () {
             $('#table-tasks').bootstrapTable({
@@ -23,8 +23,10 @@ request.onload = function() {
                 }
             }
             );
+            addProgressBar();
         }
         );
+        
     } else {
         document.querySelector(".error").innerHTML = "Brak danych!";
     }
