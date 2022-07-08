@@ -20,16 +20,16 @@ function date_time()
     var seconds = zero_first_format(current_datetime.getSeconds());
     return day+"/"+month+"/"+year+" "+hours+":"+minutes+":"+seconds;
 }
-    
-    var actualDate = document.querySelector(".actual-date");
-    setInterval(function () {
-        actualDate.innerHTML = date_time();
-    }, 1000);
 
-    
+var actualDate = document.querySelector(".actual-date");
+setInterval(function () {
+    actualDate.innerHTML = date_time();
+}, 1000);
 
-    function setColors () {
-        setTimeout(function() {
+
+
+function setColors () {
+    setTimeout(function() {
         var percentItems = document.querySelectorAll('.percent');
         percentItems.forEach (item => {
             var percentValue = item.innerText;
@@ -47,25 +47,25 @@ function date_time()
 
 function addProgressBar(){
     setTimeout(function() {
-    var percents = document.querySelectorAll('.percent');
-    percents.forEach (item => {
-        
-        percentValue = item.innerHTML;
-        if (!isNaN(parseFloat(percentValue)) && isFinite(percentValue)) {          
-            progressValue = "<div class='progress'><div class='progress-bar' role='progressbar' style='width: "+ percentValue +"%' aria-valuenow='"+ percentValue +"' aria-valuemin='0' aria-valuemax='100'></div></div>";
-            item.innerHTML = item.innerHTML + progressValue;
-        }                 })
-            }, 10)
-        }
-
-        var sizeButton = document.querySelector('.change-size');
-        sizeButton.addEventListener('click', changeSize);
-        function changeSize(){
-            var element = document.querySelector(".wrapper");
-            element.classList.toggle("tablet");
-            if (element.classList.contains("tablet")) {
-                document.querySelector(".change-size span").innerHTML = "desktop";
-            } else {
-                document.querySelector(".change-size span").innerHTML = "tablet";
-            };
-        }
+        var percents = document.querySelectorAll('.percent');
+        percents.forEach (item => {
+            
+            percentValue = item.innerHTML;
+            if (!isNaN(parseFloat(percentValue)) && isFinite(percentValue)) {          
+                progressValue = "<div class='progress'><div class='progress-bar' role='progressbar' style='width: "+ percentValue +"%' aria-valuenow='"+ percentValue +"' aria-valuemin='0' aria-valuemax='100'></div></div>";
+                item.innerHTML = item.innerHTML + progressValue;
+            }                 })
+        }, 10)
+    }
+    
+    var sizeButton = document.querySelector('.change-size');
+    sizeButton.addEventListener('click', changeSize);
+    function changeSize(){
+        var element = document.querySelector(".wrapper");
+        element.classList.toggle("tablet");
+        if (element.classList.contains("tablet")) {
+            document.querySelector(".change-size span").innerHTML = "desktop";
+        } else {
+            document.querySelector(".change-size span").innerHTML = "tablet";
+        };
+    }
